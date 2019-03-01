@@ -19,7 +19,7 @@ function makeElement(tagName, className, text) {
 startButton.addEventListener('click', function() {
   for (var i = 0; i < questions.length; i ++) {
     // создаю карточку, даю ей класс и задаю цвет
-    var card = makeElement('div', 'main__card', false)
+    var card = makeElement('li', 'main__card', false);
     var cardColor = colors[Math.floor(Math.random() * (colors.length - 1 + 1))];
     card.style.backgroundColor = cardColor;
     // создаю вопрос; если много текста, делаю его лучше
@@ -76,7 +76,8 @@ getResultsButton.addEventListener('click', function() {
   var counter = 0;
   var incorrectAnswers = [];
   var cardList = cardsContainer.getElementsByClassName('main__card');
-
+  
+  // проверяю, отмечены ли нужные радиоКнопки 
   for (var i = 0; i < cardList.length; i ++) {
     var inputList = cardList[i].querySelectorAll('input');
     var mistakeQuestion = questions[i][0];
@@ -156,7 +157,3 @@ document.addEventListener('keydown', function (evt) {
     closePopup();
   }
 });
-
-
-// или через li всё сделать?
-
