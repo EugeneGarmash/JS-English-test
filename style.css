@@ -1,0 +1,363 @@
+/* :root {
+  */
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #ececec;
+  max-width: 1365px;
+  min-width: 300px;
+  margin: 0 auto;
+} 
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0.5rem 3.5%; 
+}
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 0.7rem;
+}
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+  background: #ececec;
+}
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(201, 204, 209); 
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(102, 105, 110); 
+}
+
+/* .page-header ------------------------ */
+
+.page-header {
+  margin-bottom: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.page-header__small {
+  text-align: center;
+}
+
+/* .main- ------------------------ */
+
+main {
+  margin-bottom: 6%; 
+}
+
+.main__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 4% auto;
+  padding: 1rem 2%; 
+  
+  border: none;
+  border-radius: 4px;
+  background: #007144;
+  box-shadow: 2px 5px 0px 0px  rgb(68, 160, 123);
+  transition: all 0.2s ;
+}
+
+.main__button:hover {
+  background: #21825B;
+}
+
+.main__button:active {
+  background: #007144;
+  transform: translateY(5px); 
+  box-shadow: none;
+}
+
+.main__button:focus {
+  outline: none;
+}
+
+.main__questions {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1rem;
+  grid-column-gap: 1%;
+  margin-bottom: 4%; 
+}
+
+@media (min-width: 650px) {
+  .main__questions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1150px) {
+  .main__questions {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.main__card {
+  padding: 2.5%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.main__card:hover {
+  filter: saturate(1.5);
+}
+
+.main__card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.main__card ul {
+  padding-left: 3%;
+}
+
+.main__card li {
+  position: relative;
+}
+
+.main__card label {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.main__card input {
+  order: -1;
+  background: white;
+  margin-right: 1rem;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+}
+
+/* FOR CUSTOM REDIO-BUTTONS
+.main__card label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1rem;
+  width: 1rem;
+  background-color: #dedede;
+  border-radius: 3px;
+}
+.main__card input::after {
+  display: inline-flex;
+  margin-left: 1rem;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background: red;
+}
+.main__card input:checked + after{
+} 
+*/
+
+@media (min-width: 650px) {
+  .main__bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1%;
+  }
+}
+
+.main__get-results,
+.main__start-over {
+  display: none;
+}
+
+/*.page-footer -------------------- */
+
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-top: 2px solid gray;
+
+  margin-top: auto;
+}
+
+@media (min-width: 575px) {
+  .page-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.page-footer__technologies {
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+
+.page-footer__socials {
+  display: flex;
+  align-items: center;
+}
+
+.page-footer__socials span {
+  margin-right: 1rem;
+}
+
+[class^="page-footer__link"] {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 3px;
+}
+ 
+.page-footer__link-facebook { 
+  background: transparent url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/2000px-F_icon.svg.png) no-repeat 50% 50%;
+  background-size: 100% 100%; 
+
+  margin-right: 0.5rem;
+} 
+.page-footer__link-github {
+  background: transparent url(https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg) no-repeat 50% 50%;
+  background-size: 100% 100%;
+}
+
+/* .modal ------------------------ */
+
+.modal__results {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+
+  width: 95%;
+  max-height: 85%;
+  max-width: 700px;
+  
+  position: fixed;
+  z-index: 20;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: auto;
+
+  background-color: #ececec;
+  border-radius: 3px;
+
+  animation-name: modal-animation;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-in-out;
+}
+
+.modal__results--shown {
+  display: flex;
+}
+
+@media (min-width: 500px) {
+  .modal__results {
+    width: 80%;
+    max-height: 80%;
+  }
+}
+
+@media (min-width: 850px) {
+  .modal__results {
+    padding: 2% 4% 2%;
+  }
+}
+
+.modal__results h2 {
+  margin-bottom: 2%;
+}
+
+.modal__close {
+  display: none;
+  position: fixed;
+  right: 2%;
+  top: 1%;
+  z-index: 40;
+
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 3px;
+  background-color: transparent;
+  background-image: 
+    linear-gradient(to top left, transparent 48%, #ffffff 48%, #ffffff 52%, transparent 52%), 
+    linear-gradient(to top right, transparent 48%, #ffffff 48%, #ffffff 52%, transparent 52%);
+}
+
+@media (min-width: 500px) {
+  .modal__close {
+    width: 2.5rem;
+    height: 2.5rem;
+
+  }
+}
+
+@media (min-width: 850px) {
+  .modal__close {
+    top: 1rem;
+    right: 1rem;
+  }
+}
+/*так как fixed относительно viewport'a, ограничиваем отступ*/
+@media (min-width: 1365px) {
+  .modal__close {
+    right: calc(((100vw - 1365px) / 2) + 1rem);
+  }
+}
+
+.modal__message {
+  color: rgb(168, 50, 50);
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 4%;
+}
+
+.modal__results::-webkit-scrollbar-track {
+  border-radius: 3px;
+}
+
+.modal__results::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+}
+
+@keyframes modal-animation {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5) ;
+    opacity: 0;
+  }
+  85% {  
+    transform: translate(-50%, -50%) scale(1.1) ;
+    opacity: 0.8;
+  }
+  100% {  
+    transform: translate(-50%, -50%) scale(1) ;
+    opacity: 1;
+  }
+}
+
+.modal__overlay {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 102%;
+  height: 102%;
+  max-width: 1365px;
+  
+  background-color: rgba(0,0,0, 0.7);
+  z-index: 10;
+}
