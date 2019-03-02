@@ -1,10 +1,11 @@
-var startButton = document.querySelector('.main__start-quiz');
-var cardsContainer = document.querySelector('.main__questions');
-var startOverButton = document.querySelector('.main__start-over');
-var getResultsButton = document.querySelector('.main__get-results');
-var resultsPopup = document.querySelector('.modal__results');
-var overlay = document.querySelector('.modal__overlay');
-var resultsClose = document.querySelector('.modal__close');
+var doc = document,
+          startButton = document.querySelector('.main__start-quiz'),
+          cardsContainer = document.querySelector('.main__questions'),
+          startOverButton = document.querySelector('.main__start-over'),
+          getResultsButton = document.querySelector('.main__get-results'),
+          resultsPopup = document.querySelector('.modal__results'),
+          overlay = document.querySelector('.modal__overlay'),
+          resultsClose = document.querySelector('.modal__close');
 
 
 // функция для создания элементов
