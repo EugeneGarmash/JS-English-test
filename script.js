@@ -63,6 +63,7 @@ startOverButton.addEventListener('click', function() {
   for (var i = cardList.length - 1; i > -1; i --) {
     cardsContainer.removeChild(cardList[i]);
   }
+  // также можно очистить карточки вот так: cardsContainer.innerHTML = ''; 
   startButton.style.display = 'flex';
   getResultsButton.style.display = 'none';
   startOverButton.style.display = 'none';
@@ -70,7 +71,7 @@ startOverButton.addEventListener('click', function() {
 
 
 // при нажатии на "результаты":
-//   - с помощтю цикла смотрю отмечен ли нужный радиоБаттон в каждой карточке. Порядковый номер отмеченного радиоБаттона в карточке должен соответствовать значению в массиве с ответами. При правильном ответе увеличивать счётчик на один.
+//   - с помощью цикла смотрю отмечен ли нужный радиоБаттон в каждой карточке. Порядковый номер отмеченного радиоБаттона в карточке должен соответствовать значению в массиве с ответами. При правильном ответе увеличивать счётчик на один.
 //   - если ответ неправильный, то запоминаю вопрос и ответ
 //   - показываю вспдывающее окно: уровень + количество баллов + выводить вопросы, на которые ответил не правильно. 
 getResultsButton.addEventListener('click', function() {
@@ -146,7 +147,7 @@ function closePopup() {
 resultsClose.addEventListener('click', function() {
   closePopup();
 });
-
+// событие кнопке закрытия можно не задавать, так как она находится вне окна (а клик вне окна будет закрывать окно)
 overlay.addEventListener('click', function() {
   closePopup();
 });
