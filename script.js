@@ -20,7 +20,9 @@ function makeElement(tagName, className, text) {
 startButton.addEventListener('click', function() {
   for (var i = 0; i < questions.length; i ++) {
     // создаю карточку, даю ей класс и задаю цвет
-    var card = makeElement('li', 'main__card', false);
+    var card = makeElement('li', 'main__card', false);   
+    card.classList.add('wow');
+    card.classList.add('jackInTheBox');
     var cardColor = colors[Math.floor(Math.random() * (colors.length - 1 + 1))];
     card.style.backgroundColor = cardColor;
     // создаю вопрос; если много текста, делаю его лучше
