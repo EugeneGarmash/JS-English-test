@@ -1,65 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<!-- this index.html file was converted from indexPug.html -->
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <meta name="author" content="Eugene Garmash">
-  <title>JS English test</title>
-  <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="customResetEugeneGarmash.css">
-  <link rel="stylesheet" href="styleSass.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Eugene Garmash">
+    <title>JS English test</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="customResetEugeneGarnash.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-  <!-- header -->
-  <header class="page-header">
-    <h1 class="page-header__page-title">English level test</h1>
-    <p class="page-header__small"> made by some jerky JS rookie who's brilliant (who am I kidding?) in English</p>
-  </header>
- 
-  <!-- main -->
-  <main class="main">
-    <button class="main__start-quiz main__button">Jeeez, I wanna start a quiiiz, press me pleeease</button>
-    <ul class="main__questions"></ul>
-    <div class="main__bottom">
-      <button class="main__get-results main__button">I am an adult, get a result</button>
-      <button class="main__start-over main__button">I'm having hangover and wanna start over.</button>
-    </div>  
-  </main>
-  
-  <!-- footer -->
-  <footer class="page-footer">
-    <p class="page-footer__technologies">Technologies used: vanilla JS, Grid CSS</p>
-    <div class="page-footer__socials">
-      <span> Author's socials: </span>
-      <a href="https://www.facebook.com/eug.garmash" class="page-footer__link--facebook">
-        <span class="visually-hidden">Facebook</span>
-      </a>
-      <a href="https://github.com/EugeneGarmash" class="page-footer__link--github">
-        <span class="visually-hidden">Github</span>
-      </a>
+    <!-- header-->
+    <header class="page-header">
+        <h2 class="page-header__page-title">English level test</h2>
+        <p class="page-header__small"> made by some jerky JS rookie who's brilliant (who am I kidding?) in English</p>
+    </header>
+    <!-- main  -->
+    <main> <button class="main__start-quiz main__button">Jeeez, I wanna start a quiiiz, press me pleeease</button>
+        <ul class="main__questions"></ul>
+        <div class="main__bottom"><button class="main__get-results main__button">I am an adult, get a result</button><button class="main__start-over main__button">I'm having hangover and wanna start over.</button></div>
+    </main>
+    <!-- footer-->
+    <footer class="page-footer">
+        <p class="page-footer__technologies"> Technologies used: vanilla JS, Grid CSS</p>
+        <div class="page-footer__socials"><span>Author's socials: </span><a class="page-footer__link-facebook" href="https://www.facebook.com/eug.garmash"><span class="visually-hidden">Facebook</span></a><a class="page-footer__link-github" href="https://github.com/EugeneGarmash"><span class="visually-hidden">Github</span></a></div>
+    </footer>
+    <!-- modal window-->
+    <div class="modal">
+        <section class="modal__results">
+            <h2>Results</h2><button class="modal__close"><span class="visually-hidden">Закрыть</span></button>
+            <div class="modal__overlay"></div>
+        </section>
     </div>
-  </footer>  
-  
-  <!-- modal window -->
-  <div class="modal">
-    <section class="modal__results">
-      <h2>Results</h2>
-    </section>
-    <button class=
-    "modal__close"><span class="visually-hidden">Закрыть</span></button>
-    <div class="modal__overlay"></div>
-  </div>
-
-
-  <script src="data.js"></script>  
-  <link rel="stylesheet" href="animate.min.css">
-  <script src="wow.min.js"></script>
-  <script src="script.js"></script>
-  <script>
-      new WOW().init();
-  </script>
-
+    
+    <script src="data.js"></script>
+    <link rel="stylesheet" href="animate.min.css">
+    <script src="wow.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        new WOW().init
+    </script>
 </body>
+
 </html>
