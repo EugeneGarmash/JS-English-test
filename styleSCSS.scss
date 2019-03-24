@@ -173,6 +173,12 @@ body {
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 3px;
+    &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      outline: 3px solid darkblue;
+    }
   }
   @mixin link-background() {
     background-color: transparent;
@@ -308,4 +314,3 @@ body {
     opacity: 1;
   }
 }
-
