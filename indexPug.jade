@@ -1,0 +1,48 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width")
+    meta(name="author" content="Eugene Garmash")
+    title JS English test
+    link(rel="stylesheet", href="normalize.css")
+    link(rel="stylesheet", href="customResetEugeneGarnash.css")
+    link(rel="stylesheet", href="style.css")
+  body
+    // header
+    header.page-header
+      h2.page-header__page-title English level test
+      p.page-header__small 
+        | made by some jerky JS rookie who's brilliant (who am I kidding?) in English
+
+    // main  
+    main 
+      button.main__start-quiz.main__button Jeeez, I wanna start a quiiiz, press me pleeease
+      ul.main__questions
+      .main__bottom
+        button.main__get-results.main__button I am an adult, get a result
+        button.main__start-over.main__button I'm having hangover and wanna start over.
+
+    // footer
+    footer.page-footer
+      p.page-footer__technologies 
+        | Technologies used: vanilla JS, Grid CSS
+      .page-footer__socials
+        span Author's socials: 
+        a(href="https://www.facebook.com/eug.garmash" class="page-footer__link-facebook")
+          span.visually-hidden Facebook
+        a(href="https://github.com/EugeneGarmash" class="page-footer__link-github")
+          span.visually-hidden Github
+
+    // modal window
+    .modal
+      section.modal__results
+        h2 Results
+        button.modal__close
+          span.visually-hidden Закрыть
+        .modal__overlay
+    script(src="data.js")
+    link(rel="stylesheet" href="animate.min.css")
+    script(src="wow.min.js")
+    script(src="script.js")
+    script new WOW().init
